@@ -1,27 +1,39 @@
 /* General styles */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   color: #333;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Header */
 header {
   text-align: center;
-  background: linear-gradient(to right, #d32f2f, #b71c1c);
   color: #fff;
-  padding: 3rem 1rem;
-  margin-bottom: 2rem;
+  padding: 4rem 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .tagline {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   opacity: 0.9;
 }
 
@@ -30,98 +42,101 @@ main {
   padding: 1rem;
 }
 
-/* Section styling */
+/* Glassmorphism Card */
 .card {
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
 }
 
 .card-header {
   font-weight: 600;
   font-size: 1.25rem;
-  border-bottom: none;
-  border-radius: 12px 12px 0 0;
-}
-
-.card-header.bg-danger {
-  background: #dc3545;
-}
-
-.card-header.bg-primary {
-  background: #007bff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
 /* Form elements */
 .form-select,
 .btn {
-  border-radius: 8px;
-  padding: 0.8rem;
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: 600;
 }
 
 /* Button styling */
+.btn {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
 .btn-danger {
-  background: #dc3545;
+  background: #e74c3c;
   border: none;
 }
 
 .btn-danger:hover {
-  background: #c82333;
+  background: #c0392b;
 }
 
 .btn-primary {
-  background: #007bff;
+  background: #3498db;
   border: none;
 }
 
 .btn-primary:hover {
-  background: #0069d9;
+  background: #2980b9;
 }
 
 /* Results section */
 #results table {
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   overflow: hidden;
 }
 
 #results th {
-  background: #007bff;
+  background: #3498db;
+  color: #fff;
 }
 
 .sms-btn {
-  background: #28a745;
+  background: #2ecc71;
   border: none;
-  transition: background 0.3s ease;
 }
 
 .sms-btn:hover {
-  background: #218838;
+  background: #27ae60;
 }
 
 /* Registration section */
 .register-section {
   text-align: center;
-  padding: 3rem 1rem;
-  background: #343a40;
+  padding: 4rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .register-btn {
-  background: #ffc107;
-  color: #212529;
+  background: #f1c40f;
+  color: #2c3e50;
   font-weight: bold;
   border: none;
-  transition: background 0.3s ease;
 }
 
 .register-btn:hover {
-  background: #e0a800;
+  background: #f39c12;
 }
 
