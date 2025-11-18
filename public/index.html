@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Donor Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Campus Blood Donor Finder</h1>
+    <p class="tagline">When Life Needs Help, We Notify❤️</p>
+  </header>
+
+  <main>
+    <!-- 🔴 STEP 1: Emergency Notification -->
+    <section class="notify-section">
+      <h2>Step 1: Emergency Blood Request</h2>
+      <p>Select the student who needs blood:</p>
+      <select id="studentSelect">
+        <option value="">-- Select Student --</option>
+      </select>
+      <button id="notifyBtn">🚨 Notify Parents & Classmates</button>
+    </section>
+
+    <!-- 🩸 STEP 2: Search Donors by Blood Group -->
+    <section class="search-box">
+      <h2>Step 2: Find Matching Blood Donors</h2>
+      <p>Select blood group to find matching donors:</p>
+      <select id="bloodGroup">
+        <option value="">-- Select Blood Group --</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+      <button id="searchBtn">🔍 Search Donors</button>
+    </section>
+
+    <!-- Donor Results -->
+    <section id="results"></section>
+
+    <!-- Registration Section -->
+    <section class="register">
+      <h2>Want to help save lives?</h2>
+      <a href="#" class="register-btn">Register as a Voluntary Blood Donor</a>
+    </section>
+  </main>
+
+  <!-- Papa Parse CSV Library -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
