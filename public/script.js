@@ -79,6 +79,16 @@ document.getElementById("notifyBtn").addEventListener("click", () => {
   alert(`✅ Notification sent for ${studentName} to parent and classmates.`);
 });
 
+// 🩸 Automatically select blood group when a student is chosen
+document.getElementById("studentSelect").addEventListener("change", (e) => {
+  const studentName = e.target.value;
+  const student = students.find(s => s["Student Name"] === studentName);
+
+  if (student) {
+    document.getElementById("bloodGroup").value = student["Blood Group"];
+  }
+});
+
 // 🔍 Search Donors by Blood Group
 document.getElementById("searchBtn").addEventListener("click", () => {
   const group = document.getElementById("bloodGroup").value.trim();
